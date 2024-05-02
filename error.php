@@ -13,6 +13,6 @@
 <body>
     <h2>帳號或密碼錯誤</h2>
     帳號<span style='color:red'><?=$_GET['user']?></span>不存在
-    <p><a href="./login.php">回登入頁面</a></p>
+    <p><a href="./login.php?login=1">回登入頁面</a></p>
 </body>
 </html>
