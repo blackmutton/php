@@ -1,3 +1,4 @@
+<?php date_default_timezone_set("Asia/Taipei");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,9 +36,15 @@
 </head>
 <body>
     <?php
-    if(isset($_GET['login'])&&$_GET['login']==1){
+    
+    if(isset($_COOKIE['login'])&&$_COOKIE['login']=='admin'){
         echo "已登入";
+        echo "<br>";
+        echo "<a href='logout.php'>登出</a>";
     }else{
+        if(isset($_COOKIE['error'])){
+            echo "<span style='color:red'>{$_COOKIE['error']}</span>";
+        }
     ?>
         <div class=container>
             <div class=content>
