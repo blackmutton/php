@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            box-sizing:border-box;
+        }
         .container{
             margin:auto;
+            padding-top: 20px;
             width:30vw;
             height:50vh;
             line-height:2;
             background-color:blue;
             position: relative;
-        }
-        .line{
-            width:100%;
-            height:10px;
-            background-color:blue;
         }
         .content{
             margin:auto;
@@ -41,7 +40,6 @@
     }else{
     ?>
         <div class=container>
-            <div class=line></div>
             <div class=content>
                 <form action="check.php" method="post">
                     <fieldset>
