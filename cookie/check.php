@@ -1,4 +1,5 @@
 <<?php
+// 使用date_default_timezone_set才能自行設定時區
 date_default_timezone_set("Asia/Taipei");
 $user=$_POST['user'];
 $pwd=$_POST['pwd'];
