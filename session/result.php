@@ -13,10 +13,15 @@
 <body>
     <h2>登入成功</h2>
     <?php
-    $user=$_GET['user'];
+    // 在使用$_SESSION前一定要宣告session_start()
+    session_start();
     ?>
     <!-- 這是一種短寫法，只代表php的echo，所以=後只能放字串、變數與數字，不能放完整的程式邏輯-->
-    歡迎<?=$user;?>登入
-    <!-- 也可以直接寫將$user改成$_GET['user'],因為$_GET本身就是一個變數-->
+    歡迎<?=$_SESSION['login'];?>登入
+    <p>
+        <a href="login.php">回登入頁</a>
+        <br>
+        <a href="logout.php">登出</a>
+    </p>
 </body>
 </html>
