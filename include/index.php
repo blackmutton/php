@@ -52,13 +52,13 @@
     </style>
 </head>
 <body>
-    <!-- 利用explode將陣列拆分成字串 -->
-    <?php $file=explode(".",basename(__FILE__))[0];?>
+    <!-- 先確認$_GET['page']的參數是否存在的三元判斷式 -->
+    <?php $page=isset($_GET['page'])?$_GET['page']:'main';?>
     <?php include_once("./layout/header.php") ?>
     <?php include_once("./layout/nav.php") ?>
     <marquee behavior="" direction="">這是一段跑馬燈</marquee>
     <?php
-    $page=isset($_GET['page'])?$_GET['page']:'main';
+    // 此作法相較流程控制更為精簡，同時也能將網址控制在index開頭，也不用擔心使用者更改網址參數
     $file="./pages/{$page}.php";
     if(file_exists($file)){
         include $file;
